@@ -2,6 +2,8 @@ echo 'Install Xcode from the App Store'
 
 read -n 1 -p 'Press enter to continue...'
 
+sudo xcodebuild -license
+
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew install Caskroom/cask/sublime-text
