@@ -4,6 +4,8 @@ read -n 1 -p 'Press enter to continue...'
 
 sudo xcodebuild -license
 
+curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/deploy/Scripts/install.sh | sh
+
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew install Caskroom/cask/sublime-text
