@@ -19,6 +19,14 @@ editProfile() {
 	sublime ~/.bash_profile
 }
 
+stabilizeMic() {
+	while true; do
+		echo "set volume input volume ${1}"
+		sudo osascript -e "set volume input volume ${1}"
+		sleep 2
+	done
+}
+
 
 export GIT_PS1_SHOWSTASHSTATE="true"
 
