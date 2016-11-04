@@ -22,6 +22,46 @@ getMessage() {
 	fi
 }
 
+getLineStats() {
+	git log --author="${1}" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
+}
+
+function getTotalLinesChanged() {
+	ignore=$1
+	author="${@:2}"
+	git log --author="${author}" --pretty=tformat: --numstat | grep -v "${ignore}" | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "%s", loc }' -
+}
+
+getAuthor() {
+	echo "${@:2}"
+}
+
+getCommits() {
+	echo "${1}"
+}
+
+getCommitStatsIgnoring() {
+	ignoreString=$1
+	echo "Ignoring ${ignoreString}"
+	git shortlog -s -n | 
+	while read x; do 
+		author=$(getAuthor $x); 
+		totalLines=$(getTotalLinesChanged $ignoreString $author); 
+		commits=$(getCommits $x);
+		linesPerCommit=$((totalLines/commits))
+		echo "${author} changed ${totalLines} lines in ${commits} commits - ${linesPerCommit} average lines per commit"; 
+	done
+}
+
+foo() {
+	git shortlog -s -n | awk '{
+		commits = $1; 
+		$1 = ""; 
+		author = $0; 
+		lines = system("bash -c '\'' git log -1 '\'' "); 
+		printf"%s changed %s lines in %s commits\n", author, lines, commits}' -
+}
+
 # Check in all staged files with the generated message
 ci() {
     git commit -m "$(getMessage $@)"
