@@ -8,6 +8,10 @@ story() {
 	export STORY=$1
 }
 
+tag() {
+	git tag -a $1 -m "${1}"
+}
+
 getMessage() {
 	if [ -n "${STORY}" ]; then
 		MS="$STORY - "
@@ -20,6 +24,13 @@ getMessage() {
 	else
 		echo "$MS$@"
 	fi
+}
+
+retag() {
+	git push --delete origin $1
+	git tag --delete $1
+	git tag -a $1 -m "${1}"
+	git push --tags
 }
 
 getLineStats() {
