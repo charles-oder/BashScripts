@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo 'Install Xcode from the App Store'
+open https://itunes.apple.com/us/app/xcode/id497799835?mt=12#
 
 read -n 1 -p 'Press enter when finished...'
 
