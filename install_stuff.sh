@@ -11,6 +11,19 @@ sudo xcodebuild -license
 echo "Installing Homebrew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+brew tap caskroom/cask
+
+# Java
+echo "Installing java..."
+brew cask install java
+
+echo "Installing microsoft-office..."
+brew cask install microsoft-office # Password Required
+
+echo "Installing cocoapods..."
+sudo gem install cocoapods # Password Required
+
+
 # Utilities
 echo "Installing openssl..."
 brew install openssl
@@ -21,9 +34,10 @@ brew install wget
 echo "Installing sublime-text..."
 brew cask install sublime-text
 # see https://packagecontrol.io for more packages
+SUBLIME_DIR=$(ls -la $(which subl) | tr ">" "\n" | tail -1 | sed 's/^ *//')
 echo "Setting up sublime packages..."
-wget https://packagecontrol.io/Package%20Control.sublime-package -P /Users/charlesoder/Library/Application\ Support/Sublime\ Text 3/Packages
-cp Package\Control.sublime-settings /Users/charlesoder/Library/Application\ Support/Sublime\ Text 3/Packages/User/
+wget https://packagecontrol.io/Package%20Control.sublime-package -P "/Users/$(whoami)/Library/Application Support/Sublime Text/Packages"
+cp Package\Control.sublime-settings "/Users/$(whoami)/Library/Application Support/Sublime Text/Packages/User/"
 
 # Update Git
 echo "Installing git..."
@@ -50,13 +64,11 @@ brew cask install hipchat
 echo "Installing carthage..."
 brew install carthage
 
-# Core Data Browser
+# Core Data Browser    MISSING
 echo "Installing sqlitebrowser..."
 brew install sqlitebrowser
 
-echo "Installing cocoapods..."
-sudo gem install cocoapods
-
+# untrusted cert
 echo "Installing odrive..."
 brew cask install odrive
 
@@ -66,7 +78,7 @@ brew cask install google-chrome
 echo "Installing docker..."
 brew install docker
 brew install docker-machine
-brew cask install docker-compose
+brew cask install docker-compose # MISSING
 
 echo "Installing teamviewer..."
 brew cask install teamviewer
@@ -76,9 +88,6 @@ brew cask install screenhero
 
 echo "Installing limechat..."
 brew cask install limechat
-
-echo "Installing microsoft-office..."
-brew cask install microsoft-office
 
 echo "Installing android-studio..."
 brew cask install android-studio
