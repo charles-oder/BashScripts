@@ -103,6 +103,9 @@ brew cask install steam
 echo "Installing gimp..."
 brew cask install gimp
 
+echo "Installing carbon-copy-cloner..."
+brew cask install carbon-copy-cloner
+
 echo "Installing AnyConnect..."
 echo "domain: err.dtn.com"
 open ./anyconnect-macosx-3.1.05170-web-deploy-k9.dmg
