@@ -65,12 +65,43 @@ brew cask install google-chrome
 echo "Installing docker..."
 brew install docker
 brew install docker-machine
+brew cask install docker-compose
 
 echo "Installing teamviewer..."
 brew cask install teamviewer
 
 echo "Installing screenhero..."
 brew cask install screenhero
+
+echo "Installing limechat..."
+brew cask install limechat
+
+echo "Installing microsoft-office..."
+brew cask install microsoft-office
+
+echo "Installing android-studio..."
+brew cask install android-studio
+
+echo "Installing disk-inventory-x..."
+brew cask install disk-inventory-x
+
+echo "Installing paw..."
+brew cask install paw
+
+echo "Installing filezilla..."
+brew cask install filezilla
+
+echo "Installing intellij community edition..."
+brew cask install intellij-idea-ce
+
+echo "Installing messenger..."
+brew cask install messenger
+
+echo "Installing steam..."
+brew cask install steam
+
+echo "Installing gimp..."
+brew cask install gimp
 
 echo "Installing AnyConnect..."
 echo "domain: err.dtn.com"
