@@ -100,3 +100,17 @@ rb_author() {
 amend() {
     git commit --amend --no-edit
 }
+
+backoutGit() {
+	git reset --hard HEAD~
+}
+
+rebaseLastPull() {
+	backoutGit
+	git pull --rebase
+}
+
+resetSubmodules() {
+	git submodule foreach git reset --hard
+	git submodule foreach git clean -dfx
+}

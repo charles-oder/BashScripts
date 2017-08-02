@@ -1,0 +1,23 @@
+{
+  "installed_packages": [
+    "Package Control",
+    "Pretty JSON",
+    "Swift",
+    "Swift Completion",
+    "AutoFileName",
+    "BracketHighlighter",
+    "ExportHtml",
+    "GenerateUUID",
+    "HexViewer",
+    "Neon Color Scheme",
+    "PackageResourceViewer",
+    "PlistJsonConverter",
+    "Python Flake8 Lint",
+    "Python Improved",
+    "SideBarEnhancements",
+    "SublimeCodeIntel",
+    "SublimeREPL",
+    "Terminal",
+    "Theme - Soda"
+  ]
+}
