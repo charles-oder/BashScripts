@@ -13,15 +13,19 @@ echo "Installing Homebrew..."
 
 brew tap caskroom/cask
 
-# Java
-echo "Installing java..."
-brew cask install java
+echo "Installing cocoapods..."
+sudo gem install cocoapods # Password Required
 
 echo "Installing microsoft-office..."
 brew cask install microsoft-office # Password Required
 
-echo "Installing cocoapods..."
-sudo gem install cocoapods # Password Required
+# untrusted cert
+echo "Installing odrive..."
+brew cask install odrive # password required
+
+# Java
+echo "Installing java..."
+brew cask install java
 
 
 # Utilities
@@ -53,7 +57,8 @@ echo "Installing checkstyle..."
 brew install checkstyle
 echo "Installing swiftlint..."
 brew install swiftlint
-
+echo "Installing findbugs..."
+brew install findbugs
 # Company Chat
 echo "Installing hipchat..."
 brew cask install hipchat
@@ -62,20 +67,18 @@ brew cask install hipchat
 echo "Installing carthage..."
 brew install carthage
 
-# Core Data Browser    MISSING
+# Core Data Browser 
 echo "Installing sqlitebrowser..."
-brew install sqlitebrowser
-
-# untrusted cert
-echo "Installing odrive..."
-brew cask install odrive
+brew cask install sqlitebrowser
 
 echo "Installing chrome..."
 brew cask install google-chrome
 
 echo "Installing docker..."
 brew install docker
+echo "Installing docker-machine..."
 brew install docker-machine
+echo "Installing docker-compose..."
 brew cask install docker-compose # MISSING
 
 echo "Installing teamviewer..."
@@ -119,7 +122,8 @@ echo "domain: err.dtn.com"
 open ./anyconnect-macosx-3.1.05170-web-deploy-k9.dmg
 
 #Load the custom profile into the user's profile
+SCRIPTS_DIR=$(pwd)
 echo "# Load custom profile" >> ~/.bash_profile
-echo "if [ -f ./.bash_profile ]; then" >> ~/.bash_profile
-echo "  source ./.bash_profile" >> ~/.bash_profile
+echo "if [ -f $SCRIPTS_DIR/.bash_profile ]; then" >> ~/.bash_profile
+echo "  source $SCRIPTS_DIR/.bash_profile" >> ~/.bash_profile
 echo "fi" >> ~/.bash_profile
