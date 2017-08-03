@@ -132,3 +132,5 @@ echo "cd"
 
 source ~/.bash_profile
 showFiles
+
+./setup_git.sh
