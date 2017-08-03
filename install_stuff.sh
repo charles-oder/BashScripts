@@ -129,3 +129,5 @@ echo "if [ -f ./.bash_profile ]; then" >> ~/.bash_profile
 echo "  source ./.bash_profile" >> ~/.bash_profile
 echo "fi" >> ~/.bash_profile
 echo "cd"
+
+source ~/.bash_profile
