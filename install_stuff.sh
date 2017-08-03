@@ -38,8 +38,10 @@ brew cask install sublime-text
 # see https://packagecontrol.io for more packages
 SUBLIME_DIR=$(ls -la $(which subl) | tr ">" "\n" | tail -1 | sed 's/^ *//')
 echo "Setting up sublime packages..."
-wget https://packagecontrol.io/Package%20Control.sublime-package -P "/Users/$(whoami)/Library/Application Support/Sublime Text/Packages"
-cp Package\Control.sublime-settings "/Users/$(whoami)/Library/Application Support/Sublime Text/Packages/User/"
+SUBLIME_PACKAGES_DIR="/Users/$(whoami)/Library/Application Support/Sublime Text 3/Packages"
+wget https://packagecontrol.io/Package%20Control.sublime-package -P "$SUBLIME_PACKAGES_DIR/../Installed packages"
+mkdir -p "$SUBLIME_PACKAGES_DIR/User/"
+cp ./Package\ Control.sublime-settings "$SUBLIME_PACKAGES_DIR/User/"
 
 # Update Git
 echo "Installing git..."
@@ -59,6 +61,10 @@ echo "Installing swiftlint..."
 brew install swiftlint
 echo "Installing findbugs..."
 brew install findbugs
+
+brew cask install fastlane
+brew cask install realm-browser
+
 # Company Chat
 echo "Installing hipchat..."
 brew cask install hipchat
