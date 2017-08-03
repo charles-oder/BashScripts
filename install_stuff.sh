@@ -25,8 +25,6 @@ sudo gem install cocoapods # Password Required
 
 
 # Utilities
-echo "Installing openssl..."
-brew install openssl
 echo "Installing wget..."
 brew install wget
 
