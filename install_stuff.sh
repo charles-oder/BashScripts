@@ -5,7 +5,7 @@ open https://itunes.apple.com/us/app/xcode/id497799835?mt=12#
 
 read -n 1 -p 'Press enter when finished...'
 
-sudo xcodebuild -license
+sudo xcodebuild -license accept
 
 # Install Homebrew
 echo "Installing Homebrew..."
