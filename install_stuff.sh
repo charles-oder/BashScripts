@@ -131,3 +131,4 @@ echo "fi" >> ~/.bash_profile
 echo "cd"
 
 source ~/.bash_profile
+showFiles
