@@ -131,7 +131,7 @@ open ./anyconnect-macosx-3.1.05170-web-deploy-k9.dmg
 #Load the custom profile into the user's profile
 SCRIPTS_DIR=$(pwd)
 echo "# Load custom profile" >> ~/.bash_profile
-echo "cd $SCRIPTS_DIR"
+echo "cd $SCRIPTS_DIR" >> ~/.bash_profile
 echo "if [ -f ./.bash_profile ]; then" >> ~/.bash_profile
 echo "  source ./.bash_profile" >> ~/.bash_profile
 echo "fi" >> ~/.bash_profile
