@@ -127,6 +127,7 @@ echo "Installing AnyConnect..."
 echo "domain: err.dtn.com"
 open ./anyconnect-macosx-3.1.05170-web-deploy-k9.dmg
 
+
 #Load the custom profile into the user's profile
 SCRIPTS_DIR=$(pwd)
 echo "# Load custom profile" >> ~/.bash_profile
