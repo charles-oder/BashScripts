@@ -61,4 +61,6 @@ if [ -f ./.git-prompt.sh ]; then
   source ./.git-prompt.sh
 fi
 
-cd ~/Documents/Developer
+export PATH="$HOME/.fastlane/bin/:$PATH"
+
+cd ~/Develop

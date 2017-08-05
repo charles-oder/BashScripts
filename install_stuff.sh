@@ -108,8 +108,10 @@ brew cask install paw
 echo "Installing filezilla..."
 brew cask install filezilla
 
-echo "Installing intellij community edition..."
-brew cask install intellij-idea-ce
+echo "Installing intellij..."
+brew cask install appcode
+brew cask install webstorm
+brew cask install intellij-idea
 
 echo "Installing messenger..."
 brew cask install messenger

@@ -8,5 +8,5 @@ git config --global alias.last 'log -1 HEAD'
 read -p "enter git email: " EMAIL
 read -p "enter git username: " USERNAME
 
-git config --global user.email "$EMAIL"
-git config --global user.name "$USERNAME"
+git config --global user.email $EMAIL
+git config --global user.name $USERNAME
