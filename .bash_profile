@@ -12,7 +12,8 @@ alias ls="ls -la"
 alias countObjC="find . \( -iname \*.m -o -iname \*.mm -o -iname \*.c -o -iname \*.cc -o -iname \*.h \) -exec wc -l '{}' \+"
 alias countSwift="find . \( -iname \*.swift \) -exec wc -l '{}' \+"
 alias clearDerivedData="rm -rf /Users/charlesoder/Library/Developer/Xcode/DerivedData"
-export simDir='/Users/charlesoder/Library/Developer/CoreSimulator/Devices/'
+alias createIosAppIcons="~/BashScripts/create_ios_app_icons.sh"
+export simDir='/Users/$(whoami)/Library/Developer/CoreSimulator/Devices/'
 
 
 editProfile() {

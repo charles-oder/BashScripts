@@ -1,0 +1,35 @@
+#!/bin/bash
+
+if [ -z "$2" ]
+  then
+    echo "Usage: create_ios_app_icons.sh source_image destination_directory"
+    exit 1
+fi
+
+SOURCE_IMAGE=$1
+DESTINATION_DIR=$2
+IMAGE_NAME=${SOURCE_IMAGE%.png}
+IMAGE_NAME=${IMAGE_NAME##*/}
+
+echo "processing $IMAGE_NAME"
+
+sips -Z 20 $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME-20.png"
+sips -Z 40 $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME-20@2x.png"
+
+sips -Z 29 $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME-29.png"
+sips -Z 58 $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME-29@2x.png"
+
+sips -Z 40 $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME-40.png"
+sips -Z 80 $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME-40@2x.png"
+
+sips -Z 50 $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME-50.png"
+sips -Z 100 $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME-50@2x.png"
+
+sips -Z 72 $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME-72.png"
+sips -Z 144 $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME-72@2x.png"
+
+sips -Z 76 $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME-76.png"
+sips -Z 152 $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME-76@2x.png"
+
+sips -Z 167 $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME-83.5@2x.png"
+
