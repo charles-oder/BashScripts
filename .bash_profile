@@ -13,6 +13,7 @@ alias countObjC="find . \( -iname \*.m -o -iname \*.mm -o -iname \*.c -o -iname 
 alias countSwift="find . \( -iname \*.swift \) -exec wc -l '{}' \+"
 alias clearDerivedData="rm -rf /Users/charlesoder/Library/Developer/Xcode/DerivedData"
 alias createIosAppIcons="~/BashScripts/create_ios_app_icons.sh"
+alias createIosImages="~/BashScripts/create_ios_images.sh"
 export simDir='/Users/$(whoami)/Library/Developer/CoreSimulator/Devices/'
 
 
