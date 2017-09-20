@@ -33,6 +33,31 @@ retag() {
 	git push --tags
 }
 
+clearTagsContainingStringBefore() {
+	git fetch
+
+	FILTER=$1
+	echo "Filter: $FILTER"
+	CUTOFF=$2
+	echo "cutoff: $CUTOFF"
+
+	comm -23 <(git tag | sort | grep $FILTER) <(git tag --contains $CUTOFF | sort | grep $FILTER) | xargs git push --delete origin
+
+	git fetch --prune origin +refs/tags/*:refs/tags/*
+}
+
+listTagsContainingStringBefore() {
+	git fetch
+
+	FILTER=$1
+	echo "Filter: $FILTER"
+	CUTOFF=$2
+	echo "cutoff: $CUTOFF"
+
+	comm -23 <(git tag | sort | grep $FILTER) <(git tag --contains $CUTOFF | sort | grep $FILTER)
+
+}
+
 getLineStats() {
 	git log --author="${1}" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
 }
