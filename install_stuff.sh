@@ -90,9 +90,6 @@ brew cask install docker-compose # MISSING
 echo "Installing teamviewer..."
 brew cask install teamviewer
 
-echo "Installing screenhero..."
-brew cask install screenhero
-
 echo "Installing limechat..."
 brew cask install limechat
 
