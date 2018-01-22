@@ -33,6 +33,15 @@ retag() {
 	git push --tags
 }
 
+pushToBranch() {
+	currentBranch=$(git rev-parse --abbrev-ref HEAD)
+	echo "current branch: '$currentBranch'"
+	git co $1
+	git merge --ff $currentBranch
+	git push
+	git co $currentBranch
+}
+
 clearTagsContainingStringBefore() {
 	git fetch
 
