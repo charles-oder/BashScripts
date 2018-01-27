@@ -12,7 +12,9 @@ alias ls="ls -la"
 alias countObjC="find . \( -iname \*.m -o -iname \*.mm -o -iname \*.c -o -iname \*.cc -o -iname \*.h \) -exec wc -l '{}' \+"
 alias countSwift="find . \( -iname \*.swift \) -exec wc -l '{}' \+"
 alias clearDerivedData="rm -rf /Users/charlesoder/Library/Developer/Xcode/DerivedData"
-export simDir='/Users/charlesoder/Library/Developer/CoreSimulator/Devices/'
+alias createIosAppIcons="~/BashScripts/create_ios_app_icons.sh"
+alias createIosImages="~/BashScripts/create_ios_images.sh"
+export simDir='/Users/$(whoami)/Library/Developer/CoreSimulator/Devices/'
 
 
 editProfile() {
@@ -62,5 +64,10 @@ if [ -f ./.git-prompt.sh ]; then
 fi
 
 export PATH="$HOME/.fastlane/bin:$PATH"
+<<<<<<< HEAD
+=======
+
+ssh-add -A
+>>>>>>> dd07fe293c0f179f8eac83be455da4ac53381cad
 
 cd ~/Develop
