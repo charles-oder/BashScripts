@@ -64,10 +64,7 @@ if [ -f ./.git-prompt.sh ]; then
 fi
 
 export PATH="$HOME/.fastlane/bin:$PATH"
-<<<<<<< HEAD
-=======
 
-ssh-add -A
->>>>>>> dd07fe293c0f179f8eac83be455da4ac53381cad
+ssh-add -AK
 
 cd ~/Develop
