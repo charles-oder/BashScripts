@@ -11,6 +11,9 @@ sudo xcodebuild -license accept
 echo "Installing Homebrew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+#install all cask apps to Applications dir
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 brew tap caskroom/cask
 
 echo "Installing cocoapods..."
@@ -111,7 +114,7 @@ brew cask install filezilla
 echo "Installing intellij..."
 brew cask install appcode
 brew cask install webstorm
-brew cask install intellij-idea
+brew cask install intellij-idea-ce
 
 echo "Installing messenger..."
 brew cask install messenger
@@ -124,6 +127,18 @@ brew cask install gimp
 
 echo "Installing carbon-copy-cloner..."
 brew cask install carbon-copy-cloner
+
+echo "Installing VLC media player"
+brew cask install vlc
+
+echo "Installing Virtual Box"
+brew cask install virtualbox
+
+echo "Installing Charles http debugging proxy"
+brew cask install charles
+
+echo "Installing Vagrant"
+brew cask install vagrant
 
 echo "Installing AnyConnect..."
 echo "domain: err.dtn.com"
@@ -143,3 +158,8 @@ source ~/.bash_profile
 showFiles
 
 ./setup_git.sh
+
+# cleanup
+brew cleanup --force
+rm -f -r /Library/Caches/Homebrew/*
+
