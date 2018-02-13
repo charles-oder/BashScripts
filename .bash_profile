@@ -17,6 +17,9 @@ alias createIosImages="~/BashScripts/create_ios_images.sh"
 export simDir='/Users/$(whoami)/Library/Developer/CoreSimulator/Devices/'
 
 
+HISTFILESIZE=10000
+HISTSIZE=10000
+
 editProfile() {
 	subl ~/.bash_profile
 }
