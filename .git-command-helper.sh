@@ -1,3 +1,5 @@
+alias gitk="gitk --all&"
+
 # Set the Developers for Git Commits
 devs() {
     export DEVS=$@
