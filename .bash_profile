@@ -32,6 +32,15 @@ stabilizeMic() {
 	done
 }
 
+speedTest() {
+	curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -
+}
+
+create_script_file() {
+	touch $1
+	chmod +x $1
+}
+
 
 export GIT_PS1_SHOWSTASHSTATE="true"
 

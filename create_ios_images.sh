@@ -19,11 +19,14 @@ IMAGE_HEIGHT=$(sips -g pixelHeight $SOURCE_IMAGE | cut -s -d ':' -f 2 | cut -c 2
 ONE_X_IMAGE_WIDTH=$(expr $IMAGE_WIDTH / 3)
 ONE_X_IMAGE_HEIGHT=$(expr $IMAGE_HEIGHT / 3)
 
+echo "Creating image sized: $ONE_X_IMAGE_WIDTH x $ONE_X_IMAGE_HEIGHT from $SOURCE_IMAGE"
 sips -z $ONE_X_IMAGE_HEIGHT $ONE_X_IMAGE_WIDTH $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME.png"
 
 TWO_X_IMAGE_WIDTH=$(expr $(expr $IMAGE_WIDTH \* 2) / 3)
 TWO_X_IMAGE_HEIGHT=$(expr $(expr $IMAGE_HEIGHT \* 2) / 3)
 
+echo "Creating image sized: $TWO_X_IMAGE_WIDTH x $TWO_X_IMAGE_HEIGHT from $SOURCE_IMAGE"
 sips -z $TWO_X_IMAGE_HEIGHT $TWO_X_IMAGE_WIDTH $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME@2x.png"
 
+echo "Creating image sized: $IMAGE_HEIGHT x $IMAGE_WIDTH from $SOURCE_IMAGE"
 sips -z $IMAGE_HEIGHT $IMAGE_WIDTH $SOURCE_IMAGE --out "$DESTINATION_DIR/$IMAGE_NAME@3x.png"
