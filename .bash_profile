@@ -20,6 +20,10 @@ export simDir='/Users/$(whoami)/Library/Developer/CoreSimulator/Devices/'
 HISTFILESIZE=1000000
 HISTSIZE=1000000
 
+launchGooglePlaySim() {
+	$ANDROID_HOME/tools/emulator -avd Nexus_5X_API_27 &
+}
+
 editProfile() {
 	subl ~/.bash_profile
 }
