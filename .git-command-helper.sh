@@ -44,6 +44,10 @@ pushToBranch() {
 	git co $currentBranch
 }
 
+pushToAppStore() {
+	pushToBranch app_store
+}
+
 clearTagsContainingStringBefore() {
 	git fetch
 
