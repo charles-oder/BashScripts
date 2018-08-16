@@ -45,6 +45,14 @@ create_script_file() {
 	chmod +x $1
 }
 
+pushBashScripts() {
+	tmp=$(pwd)
+	cd ~/BashScripts
+	cia $@
+	git push
+	cd $tmp
+}
+
 
 export GIT_PS1_SHOWSTASHSTATE="true"
 
