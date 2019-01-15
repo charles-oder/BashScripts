@@ -15,17 +15,3 @@ git clone git@bitbucket.org:charlesoder/certs.git
 git clone git@bitbucket.org:charlesoder/sd-serv.git
 git clone git@bitbucket.org:charlesoder/sd-ios.git
 git clone git@bitbucket.org:charlesoder/sd-android.git
-
-mkdir -p ~/Develop/DTN
-cd ~/Develop/DTN
-git clone git@bitbucket.org:dtnse/advisor-ios.git
-git clone git@bitbucket.org:dtnse/connect-ios.git
-git clone git@bitbucket.org:dtnse/dtn-ui-helpers-ios.git
-git clone git@bitbucket.org:dtnse/jenkins-scripts.git
-git clone git@bitbucket.org:dtnse/chembook-ios.git
-git clone git@bitbucket.org:dtnse/prophetx-ios-ws.git
-git clone git@bitbucket.org:dtnse/connect-web-services-ios.git
-git clone git@bitbucket.org:dtnse/prophetx-android.git
-git clone git@bitbucket.org:dtnse/agweathertools-ios.git
-git clone git@bitbucket.org:dtnse/dtn-logging-ios.git
-git clone git@bitbucket.org:dtnse/podspecs.git
