@@ -22,10 +22,6 @@ sudo gem install cocoapods # Password Required
 echo "Installing microsoft-office..."
 brew cask install microsoft-office # Password Required
 
-# untrusted cert
-echo "Installing odrive..."
-brew cask install odrive # password required
-
 # Java
 echo "Installing java..."
 brew cask install java
@@ -76,25 +72,11 @@ brew cask install hipchat
 echo "Installing carthage..."
 brew install carthage
 
-# Core Data Browser 
-echo "Installing sqlitebrowser..."
-brew cask install sqlitebrowser
-
 echo "Installing chrome..."
 brew cask install google-chrome
 
-echo "Installing docker..."
-brew install docker
-echo "Installing docker-machine..."
-brew install docker-machine
-echo "Installing docker-compose..."
-brew cask install docker-compose # MISSING
-
 echo "Installing teamviewer..."
 brew cask install teamviewer
-
-echo "Installing limechat..."
-brew cask install limechat
 
 echo "Installing android-studio..."
 brew cask install android-studio
@@ -102,19 +84,8 @@ brew cask install android-studio
 echo "Installing disk-inventory-x..."
 brew cask install disk-inventory-x
 
-echo "Installing paw..."
-brew cask install paw
-
 echo "Installing filezilla..."
 brew cask install filezilla
-
-echo "Installing intellij..."
-brew cask install appcode
-brew cask install webstorm
-brew cask install intellij-idea-ce
-
-echo "Installing messenger..."
-brew cask install messenger
 
 echo "Installing steam..."
 brew cask install steam
@@ -127,20 +98,6 @@ brew cask install carbon-copy-cloner
 
 echo "Installing VLC media player"
 brew cask install vlc
-
-echo "Installing Virtual Box"
-brew cask install virtualbox
-
-echo "Installing Charles http debugging proxy"
-brew cask install charles
-
-echo "Installing Vagrant"
-brew cask install vagrant
-
-echo "Installing AnyConnect..."
-echo "domain: err.dtn.com"
-open ./anyconnect-macosx-3.1.05170-web-deploy-k9.dmg
-
 
 #Load the custom profile into the user's profile
 SCRIPTS_DIR=$(pwd)
