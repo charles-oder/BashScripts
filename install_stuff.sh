@@ -91,9 +91,6 @@ brew cask install filezilla
 echo "Installing gimp..."
 brew cask install gimp
 
-echo "Installing carbon-copy-cloner..."
-brew cask install carbon-copy-cloner
-
 echo "Installing VLC media player"
 brew cask install vlc
 
