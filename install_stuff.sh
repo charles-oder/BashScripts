@@ -1,15 +1,8 @@
 #!/bin/bash
 
-confirm() {
-	echo "Enter to continue, N to skip"
-	read CONFIRMATION
-	if [ "$CONFIRMATION" = "N" ]; then
-		return 1
-	else
-		return 0
-	fi
-}
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+source $SCRIPT_DIR/confirmation.sh
 
 echo 'Install Xcode from the App Store'
 open https://itunes.apple.com/us/app/xcode/id497799835?mt=12#
@@ -132,3 +125,7 @@ showFiles
 brew cleanup
 rm -f -r /Library/Caches/Homebrew/*
 
+echo "Creating new SSH key...."
+if confirm; then
+	$SCRIPT_DIR/create_ssh_key.sh
+fi
