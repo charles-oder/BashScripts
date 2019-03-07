@@ -23,8 +23,9 @@ echo "Installing microsoft-office..."
 brew cask install microsoft-office # Password Required
 
 # Java
-echo "Installing java..."
-brew cask install java
+echo "Installing jdk 8..."
+brew tap caskroom/versions
+brew cask install java8
 
 
 # Utilities
