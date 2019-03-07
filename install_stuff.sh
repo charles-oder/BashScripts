@@ -88,9 +88,6 @@ brew cask install disk-inventory-x
 echo "Installing filezilla..."
 brew cask install filezilla
 
-echo "Installing steam..."
-brew cask install steam
-
 echo "Installing gimp..."
 brew cask install gimp
 
