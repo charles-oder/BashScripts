@@ -1,5 +1,16 @@
 #!/bin/bash
 
+confirm() {
+	echo "Enter to continue, N to skip"
+	read CONFIRMATION
+	if [ "$CONFIRMATION" = "N" ]; then
+		return 1
+	else
+		return 0
+	fi
+}
+
+
 echo 'Install Xcode from the App Store'
 open https://itunes.apple.com/us/app/xcode/id497799835?mt=12#
 
@@ -17,16 +28,21 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew tap caskroom/cask
 
 echo "Installing cocoapods..."
-sudo gem install cocoapods # Password Required
+if confirm; then
+	sudo gem install cocoapods # Password Required
+fi
 
 echo "Installing microsoft-office..."
-brew cask install microsoft-office # Password Required
+if confirm; then
+	brew cask install microsoft-office # Password Required
+fi
 
 # Java
 echo "Installing jdk 8..."
-brew tap caskroom/versions
-brew cask install java8
-
+if confirm; then
+	brew tap caskroom/versions
+	brew cask install java8
+fi
 
 # Utilities
 echo "Installing wget..."
@@ -67,7 +83,9 @@ brew cask install realm-browser
 
 # Company Chat
 echo "Installing hipchat..."
-brew cask install hipchat
+if confirm; then
+	brew cask install hipchat
+fi
 
 # iOS Build Managemet
 echo "Installing carthage..."
@@ -77,7 +95,9 @@ echo "Installing chrome..."
 brew cask install google-chrome
 
 echo "Installing teamviewer..."
-brew cask install teamviewer
+if confirm; then
+	brew cask install teamviewer
+fi
 
 echo "Installing android-studio..."
 brew cask install android-studio
@@ -109,6 +129,6 @@ showFiles
 ./setup_git.sh
 
 # cleanup
-brew cleanup --force
+brew cleanup
 rm -f -r /Library/Caches/Homebrew/*
 
