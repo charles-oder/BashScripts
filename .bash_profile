@@ -90,5 +90,3 @@ fi
 export PATH="$HOME/.fastlane/bin:$PATH"
 
 ssh-add -AK
-
-cd ~/Develop
