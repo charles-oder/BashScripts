@@ -87,5 +87,3 @@ if [ -f ./.git-prompt.sh ]; then
 fi
 
 export PATH="$HOME/.fastlane/bin:$PATH"
-
-ssh-add -AK
