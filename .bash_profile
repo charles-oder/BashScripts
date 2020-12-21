@@ -8,7 +8,6 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 
 alias u="cd .."
 alias h="cd ~"
-alias ls="ls -la"
 alias countObjC="find . \( -iname \*.m -o -iname \*.mm -o -iname \*.c -o -iname \*.cc -o -iname \*.h \) -exec wc -l '{}' \+"
 alias countSwift="find . \( -iname \*.swift \) -exec wc -l '{}' \+"
 alias clearDerivedData="rm -rf /Users/charlesoder/Library/Developer/Xcode/DerivedData"
